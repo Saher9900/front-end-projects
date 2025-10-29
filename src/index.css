@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-color: #3c464d;
+  --primary-color: #E99239;
+  --text-color: #F5F5F5;
+}
+
+body {
+  font-family: "Cairo", sans-serif;
+}
+
+::placeholder {
+  font-family: "Cairo", sans-serif;
+}

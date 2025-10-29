@@ -1,0 +1,136 @@
+.NaveBar{
+  height: 150px;
+  background-color: var(--main-color);
+  color: var(--text-color);
+}
+
+.en {
+  font-size: 20px;
+}
+
+.arrow-down {
+  font-size: 30px;
+  height: 100%;
+  display: block;
+}
+
+.search-section {
+  height: 59px;
+  gap: 150px;
+}
+
+.icon-style {
+  font-size: 25px;
+}
+
+.icons-container {
+  height: fit-content;
+}
+
+
+.products-counter {
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: var(--primary-color);
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: -8px;
+}
+
+.search-icon {
+  height: 40px;
+  width: 40px;
+  background-color: var(--primary-color);
+}
+
+.search-bar {
+  height: 40px;
+  width: 300px;
+  border: 0;
+  outline: 0;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.nav-links {
+  background-color: var(--main-color);
+}
+
+input {
+  text-align: right;
+}
+
+.links-styling {
+  font-size: 22px;
+  padding-left: 20px;
+}
+
+.links-styling::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 3px;
+  border-radius: 3px;
+  background-color: var(--primary-color);
+  left: -3px;
+  top: 0px;
+}
+
+.links-styling:last-child::before {
+  display: none;
+}
+
+.burger-icon {
+  font-size: 50px;
+  display: none;
+  cursor: pointer;
+}
+
+@media (max-width: 1440px) {
+  .NaveBar {
+    flex-direction: row-reverse;
+    height: auto;
+    padding: 0 30px;
+    background-color: var(--main-color);
+    position: relative;
+  }
+
+  .NaveBar .burger-icon {
+    display: block;
+  }
+
+  .NaveBar .logoImage img {
+    height: 102px;
+  }
+
+  .NaveBar .icons-container {
+    display: none !important; 
+  }
+  .NaveBar .nav-links {
+    visibility: hidden;
+    opacity: 0;
+    display: none !important;
+  }
+  /* When dropDown class is applied to nav-links, show it on small screens */
+  .NaveBar .nav-links.dropDown {
+    display: flex !important;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 100%;
+    align-items: end;
+    padding-right: 30px;
+    padding-bottom: 20px;
+  }
+  .NaveBar .nav-links.dropDown .links-styling::before {
+    display: none;
+  }
+}
