@@ -1,6 +1,7 @@
 import "./NaveBar.style.css";
 import LogoImage from "../../assets/images/logo.png";
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 // Icons
 
 import { RiArrowDropDownLine } from "react-icons/ri";
@@ -11,9 +12,9 @@ import { IoSearchOutline } from "react-icons/io5";
 import { BiMenuAltLeft } from "react-icons/bi";
 
 function NaveBar() {
-  const [hidden, setHidden] = useState(false)
+  const [hidden, setHidden] = useState(true)
   const handleDropDown = () => {
-    setHidden(prev => !prev)
+    setHidden(!hidden)
   }
   return (
     <div className="NaveBar d-flex align-items-end text-white justify-content-between">
@@ -64,12 +65,12 @@ function NaveBar() {
         <BiMenuAltLeft />
       </div>
       {/* NavLinks */}
-      <div className={`nav-links d-flex gap-4 ${hidden ? 'dropDown' : 'align-items-end mb-4 flex-row-reverse me-3'}`}>
-        <div className="links-styling position-relative">الرئيسية</div>
-        <div className="links-styling position-relative">جميع الكتب</div>
-        <div className="links-styling position-relative">المنتجات الجديدة</div>
-        <div className="links-styling position-relative">المذكرات</div>
-        <div className="links-styling position-relative">المراجعات</div>
+      <div className={`nav-links d-flex gap-4 ${hidden ? 'align-items-end mb-4 flex-row-reverse me-3' : 'dropDown'}`}>
+        <NavLink to={'/'} className="links-styling position-relative text-white text-decoration-none">الرئيسية</NavLink>
+        <NavLink to={'/allbooks'} className="links-styling position-relative text-white text-decoration-none">جميع الكتب</NavLink>
+        <NavLink to={'/newproducts'} className="links-styling position-relative text-white text-decoration-none">المنتجات الجديدة</NavLink>
+        <NavLink to={'/notebooks'} className="links-styling position-relative text-white text-decoration-none">المذكرات</NavLink>
+        <NavLink to={'/reviews'} className="links-styling position-relative text-white text-decoration-none">المراجعات</NavLink>
       </div>
     </div>
   );
