@@ -27,7 +27,7 @@ function App() {
         {path: 'reviews', element: <Reviews />},
       ]
     }
-  ])
+  ], {basename: '/front-end-projects'});
   return (
     <RouterProvider router={router} />
   )
