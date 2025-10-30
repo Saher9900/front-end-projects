@@ -67,10 +67,10 @@ function NaveBar() {
       {/* NavLinks */}
       <div className={`nav-links d-flex gap-4 ${hidden ? 'align-items-end mb-4 flex-row-reverse me-3' : 'dropDown'}`}>
         <NavLink to={'/'} className="links-styling position-relative text-white text-decoration-none">الرئيسية</NavLink>
-        <NavLink to={'/allbooks'} className="links-styling position-relative text-white text-decoration-none">جميع الكتب</NavLink>
-        <NavLink to={'/newproducts'} className="links-styling position-relative text-white text-decoration-none">المنتجات الجديدة</NavLink>
-        <NavLink to={'/notebooks'} className="links-styling position-relative text-white text-decoration-none">المذكرات</NavLink>
-        <NavLink to={'/reviews'} className="links-styling position-relative text-white text-decoration-none">المراجعات</NavLink>
+        <NavLink to={'allbooks'} className="links-styling position-relative text-white text-decoration-none">جميع الكتب</NavLink>
+        <NavLink to={'newproducts'} className="links-styling position-relative text-white text-decoration-none">المنتجات الجديدة</NavLink>
+        <NavLink to={'notebooks'} className="links-styling position-relative text-white text-decoration-none">المذكرات</NavLink>
+        <NavLink to={'reviews'} className="links-styling position-relative text-white text-decoration-none">المراجعات</NavLink>
       </div>
     </div>
   );
